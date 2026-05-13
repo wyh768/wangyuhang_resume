@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     title: "王昱航 | AI研发 & Agent应用开发",
     description: "浙江大学生物医学工程本科，专注AI编程工具、Agent应用开发与Prompt Engineering",
     type: "website",
+    url: "https://resume-site-generator.vercel.app",
+    siteName: "王昱航个人主页",
   },
 };
 

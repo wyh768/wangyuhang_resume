@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://yuhangwang.com/sitemap.xml',
+    sitemap: 'https://resume-site-generator.vercel.app/sitemap.xml',
   }
 }
