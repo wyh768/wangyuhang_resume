@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A high-end, minimal personal resume/portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## Features
+
+- **3 Style Templates**: Minimal (B/W alternating), Dark (orange accent), Terminal (hacker style)
+- **Smooth Animations**: Scroll-triggered reveals, stagger effects, bar chart animations
+- **Project Showcase**: Embed videos and images in project cards
+- **PDF Download**: One-click resume PDF download
+- **SEO Ready**: Auto-generated sitemap.xml and robots.txt
+- **Responsive**: Mobile, tablet, and desktop layouts
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/) (App Router + Turbopack)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Geist](https://vercel.com/font) (local fonts)
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  lib/
+    types.ts           # Data interfaces
+    sample-data.ts     # Your resume data (edit this!)
+  templates/
+    MinimalPro/        # B/W alternating, PRD-style
+    CreativeDesign/    # Dark + orange accent
+    DarkTech/          # Terminal/hacker style
+  app/
+    page.tsx           # Style switcher + template render
+    layout.tsx         # Fonts, metadata
+    globals.css        # Global styles
+    sitemap.ts         # SEO
+    robots.ts          # SEO
+public/
+  photos/photo.png     # Your portrait
+  resume.pdf           # Downloadable CV
+  *.mp4                # Project videos
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Customize
 
-## Learn More
+1. **Edit your data**: Modify `src/lib/sample-data.ts`
+2. **Replace photo**: Put your photo at `public/photos/photo.png`
+3. **Replace resume PDF**: Put your PDF at `public/resume.pdf`
+4. **Add project videos**: Copy MP4 files to `public/` and reference in data
+5. **Default style**: Change `useState<TemplateStyle>('minimal')` in `page.tsx`
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [DEPLOY.md](./DEPLOY.md) for detailed instructions on:
+- Vercel one-click deploy
+- Custom domain setup
+- Google/Baidu SEO submission
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
