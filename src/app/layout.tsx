@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: "王昱航 | AI研发 & Agent应用开发",
   description: "浙江大学生物医学工程本科，专注AI编程工具、Agent应用开发与Prompt Engineering的个人主页",
   keywords: ["AI", "Agent", "Prompt Engineering", "Cursor", "Claude Code", "简历", "Portfolio"],
+  verification: {
+    google: "eyf6Eub_W2TqjuRVOaiLsbFoMwd1AF1VZc2JpQMqRSo",
+  },
   openGraph: {
     title: "王昱航 | AI研发 & Agent应用开发",
     description: "浙江大学生物医学工程本科，专注AI编程工具、Agent应用开发与Prompt Engineering",
